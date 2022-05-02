@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,12 +18,14 @@ public class PlayerController : MonoBehaviour
 
     /// 컴포넌트 변수들 ///
     Rigidbody rigid; // 리지드바디
+    NavMeshAgent agent;
 
 
-    private void Start()
+    private void Awake()
     {
         /// 컴포넌트변수 할당 ///
         rigid = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -64,10 +67,9 @@ public class PlayerController : MonoBehaviour
         // targetPos로 플레이어의 위치를 이동
         if(targetPos != Vector3.zero)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * 10);
-            transform.LookAt(targetPos); // 캐릭터 회전
+            agent.SetDestination(targetPos);
+
         }
-            
         
     }
 }
