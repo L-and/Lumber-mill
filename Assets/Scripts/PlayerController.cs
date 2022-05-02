@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     /// 이동 변수들 ///
     Vector3 targetPos; // 플레이어가 이동하는 위치
-    float distance = 10.0f;
+    float distance = 1000.0f;
 
     /// 입력 변수들 ///
     bool isRightMouseDown; // 우클릭 입력
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         if(isRightMouseDown) // 우클릭이 입력됐을 때
         {
             Ray ray = mainCam.ScreenPointToRay(Input.mousePosition); // 카메라에서 레이저를 쏨
-            Debug.DrawRay(ray.origin, ray.direction * 10f, Color.red, 1f); // [디버그]레이저를 씬에 표시
+            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 1f); // [디버그]레이저를 씬에 표시
 
             int layerMask = 1 << LayerMask.NameToLayer("Ground"); // 그라운드레이어랑 레이가 충돌하게 설정
             if (Physics.Raycast(ray, out RaycastHit raycastHit, distance, layerMask)) // 레이저가 뭔가에 맞았다면
@@ -54,14 +54,19 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("맞은 객체 : " + raycastHit.transform.name);
 
             }
+
         }
     }
 
     public void MovePlayerPosition() // 플레이어의 위치를 targetPos로 이동시켜줌
     {
         // targetPos로 플레이어의 위치를 이동
-        if(targetPos != null)
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * 10); 
+        if(targetPos != Vector3.zero)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * 10);
+            transform.LookAt(targetPos); // 캐릭터 회전
+        }
+            
         
     }
 }
