@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NomalEnemy
-  - MainBuilding
   - AttackTower
+  - EndPoint
   layers:
   - Default
   - TransparentFX
@@ -14,14 +14,14 @@ TagManager:
   - 
   - Water
   - UI
+  - 
   - Ground
+  - Road
+  - Tower
+  - Enemy
+  - Player
+  - Friendly Unit
   - Wall
-  - Load
-  - Building
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
