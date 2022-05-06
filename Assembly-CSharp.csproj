@@ -58,9 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\NavigationBaker.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\CameraAttcher.cs" />
     <Compile Include="Assets\Scripts\System\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\System\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\CameraAttcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7007632271376410812}
   - component: {fileID: 6924824047098637472}
   - component: {fileID: 8225668435901568684}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Righy Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8841390857318604879}
   - component: {fileID: 7499194148395649959}
   - component: {fileID: 1864922166546439551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1122893359235662739}
   - component: {fileID: 968177688570990459}
   - component: {fileID: 4401358786957665495}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TestEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,4 +341,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45c5903e291ab445b28a576d1ec8bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTargetObject: {fileID: 7226994996750505508, guid: c6c5b578cbabb104fb9233841b01e054, type: 3}

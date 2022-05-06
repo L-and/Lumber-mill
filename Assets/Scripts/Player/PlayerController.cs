@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     /// 오브젝트 변수들 ///
     public Camera mainCam; // 카메라
 
-    /// 이동 변수들 ///
+        /// 이동 변수들 ///
     Vector3 targetPos; // 플레이어가 이동하는 위치
     float distance = 1000.0f;
 
