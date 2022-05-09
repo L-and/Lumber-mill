@@ -54,8 +54,6 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit raycastHit, distance, layerMask)) // 레이저가 뭔가에 맞았다면
             {
                 targetPos = raycastHit.point + Vector3.up;
-                Debug.Log("movePoint : " + targetPos.ToString());
-                Debug.Log("맞은 객체 : " + raycastHit.transform.name);
 
             }
 
