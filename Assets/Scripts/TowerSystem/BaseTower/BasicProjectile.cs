@@ -22,6 +22,15 @@ public class BasicProjectile : MonoBehaviour
 
     private void moveToPlayer()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed);
+        if(target != null)
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 10) // 적에게 충돌하면
+        {
+            Destroy(gameObject); // 포탑에맞은 객체에게 데미지를 주는걸로 변경(변경해야할 부분)
+        }
     }
 }

@@ -37,4 +37,12 @@ public class EnemyMove : MonoBehaviour
             agent.SetDestination(mainTargetPos);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "EndPoint") // 메인건물에 도달하면
+        {
+            Destroy(gameObject); // 메인건물에 데미지를 주게해야함(변경해야할부분)
+        }
+    }
 }
