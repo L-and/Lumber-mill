@@ -38,7 +38,7 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void on(Collider other)
     {
         if(other.tag == "EndPoint") // 메인건물에 도달하면
         {
