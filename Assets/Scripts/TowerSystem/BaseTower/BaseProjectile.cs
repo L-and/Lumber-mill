@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicProjectile : MonoBehaviour
+// 모든 포탑투사체의 기본이되는 클래스
+public class BaseProjectile : MonoBehaviour
 {
     MakeProjectileSystem projectileSystem;
     GameObject target;
@@ -11,7 +12,10 @@ public class BasicProjectile : MonoBehaviour
 
     private void Update()
     {
-        moveToPlayer();
+        moveToPlayer(); // 플레이어에게 투사체를 이동하게 함
+
+        if (target == null) // 투사체가 날라가는도중 타겟이 사라지면
+            destroyProjectile(); // 투사체 파괴
     }
 
     public void setTarget()
@@ -26,11 +30,8 @@ public class BasicProjectile : MonoBehaviour
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void destroyProjectile()
     {
-        if(other.gameObject.layer == 10) // 적에게 충돌하면
-        {
             Destroy(gameObject); // 포탑에맞은 객체에게 데미지를 주는걸로 변경(변경해야할 부분)
-        }
     }
 }

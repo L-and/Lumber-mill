@@ -59,11 +59,14 @@
     <Compile Include="Assets\Scripts\NavigationBaker.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TowerSystem\MakeProjectileSystem.cs" />
-    <Compile Include="Assets\Scripts\TowerSystem\BaseTower\BasicProjectile.cs" />
-    <Compile Include="Assets\Scripts\System\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\TowerSystem\BaseTower\BaseProjectile.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\System\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\CameraAttcher.cs" />
+    <Compile Include="Assets\Scripts\StatusSystem\EntityStatus.cs" />
+    <Compile Include="Assets\Scripts\StatusSystem\BuildingStatus.cs" />
+    <Compile Include="Assets\Scripts\TowerSystem\BaseTower\Projectiles\BasicProjectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

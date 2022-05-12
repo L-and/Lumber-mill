@@ -30,7 +30,7 @@ public class MakeProjectileSystem : MonoBehaviour
         attackCollider.radius = attackRadius; // 공격 사거리 설정
         attackCollider.isTrigger = true;
 
-        attackObjectPrefab = Resources.Load("AttackObjectPrefab") as GameObject; // 포탑공격 오브젝트 설정
+        attackObjectPrefab = Resources.Load("BasicProjectilePrefab") as GameObject; // 포탑공격 오브젝트 설정
 
         attackAble = true;
 
