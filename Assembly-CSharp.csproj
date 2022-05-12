@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EA83C7CE-DFB0-62D6-04C8-942B716EE950}</ProjectGuid>
+    <ProjectGuid>{52AF23E4-9D66-B459-9D9C-F880DC4DE28A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,11 +59,11 @@
     <Compile Include="Assets\Scripts\NavigationBaker.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TowerSystem\MakeProjectileSystem.cs" />
+    <Compile Include="Assets\Scripts\TowerSystem\BaseTower\BasicProjectile.cs" />
     <Compile Include="Assets\Scripts\System\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\System\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\CameraAttcher.cs" />
-    <Compile Include="Assets\Scripts\TowerSystem\BaseTower\BasicProjectile.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -675,11 +675,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{817A9DC3-764B-74A9-91B6-7C90E801CFBD}</Project>
+      <Project>{6F49B0FC-AED4-420B-AD3C-410C55E467A7}</Project>
       <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{B782CEA8-CD4E-D655-0787-F4638E126F0A}</Project>
+      <Project>{153DCBFF-351C-90F6-377E-075D06E7A710}</Project>
       <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>
